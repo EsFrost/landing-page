@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body, button {
+	font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+	font-size: 2.5em;
+}
+
+h3 {
+	font-size: 1.5em;
+	margin-bottom: 15px;
+}
+
+.home, .discount {
+	height: 100vh;
+}
+
+.home {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./media/images/main.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	align-items: center;
+	
+	position: relative;
+
+	font-family: 'Lobster', sans-serif;
+}
+
+button {
+	border: none;
+	width: auto;
+	height: 40px;
+	padding: 10px;
+	background: #f2a93c;
+	font-size: 15px;
+	font-weight: bold;
+	border-radius: 3px;
+	color: #fff;
+	cursor: pointer;
+}
+
+button:hover {
+	background: #f7bb62;
+}
+
+button:hover, button:focus {
+	border: none;
+	outline: none;
+}
+
+.home-header, .menu {
+	display: flex;
+	height: 80px;
+}
+
+.home-header {
+	margin-left: -60px;
+	z-index: 1;
+}
+
+.account-btn {
+	position: absolute;
+	right: 10px;
+	top: 20px;
+}
+
+.main-content, .discount-content {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin-top: -80px;
+	justify-content: center;
+	align-items: center;
+}
+
+.discount {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	position: relative;
+}
+
+.discount-header {
+	height: 400px;
+	width: 100%;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./media/images/header.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	
+	color: #fff;
+}
+
+.logo {
+	margin-left: 20px;
+	width: 240px;
+	height: 80px;
+}
+
+.menu-list {
+	position: absolute;
+	right: 10px;
+	list-style: none;
+	top: 25px;
+}
+
+.menu-items {
+	display: inline;
+	color: #fff;
+	text-decoration: none;
+	font-family: 'Lobster', sans-serif;
+	font-size: 25px;
+	padding: 0 10px;
+}
+
+.menu-list a, .menu-list a:visited {
+	color: inherit;
+	text-decoration: none;
+}
+
+.menu-list a:hover {
+	text-decoration: underline;
+}
+
+.inscr {
+	font-family: 'Lobster', sans-serif;
+	text-align: center;
+	font-size: 25px;
+	margin-top: 20px;
+}
+
+.disclaimer {
+	margin-top: 20px;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	padding: 40px;
+	border: 1px solid #f2a93c;
+	box-shadow: 8px 8px 10px -6px rgba(0, 0, 0, 0.5);
+}
+
+.card h2, .card small, .card button {
+	margin-bottom: 20px;
+}
+
+.card small, .card button, .card-list {
+	margin-top: 10px;
+}
+
+.card-list {
+	list-style: none;
+}
+
+.card-list li {
+	margin-bottom: 5px;
+}
+
+.card-list li:first-of-type {
+	margin-bottom: 15px !important;
+	font-weight: bold;
+}
+
+.card-list li:first-of-type:before {
+	background: none;
+}
+
+.card-items:before {
+	content: '';
+	display: inline-block;
+	background-image: url('./media/images/arrow.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	width: 15px;
+	height: 15px;
+	margin-right: 10px;
+}
+
+@media(max-width: 520px) {
+	.account-btn, .menu-list {
+			display: none;
+		}
+
+		.logo {
+			margin-left: 50%;
+		}
+}
+
+@media(max-height: 768px) {
+	.discount {
+		height: auto;
+	}
+
+	.discount-header {
+		height: 400px;
+	}
+
+	.card {
+		margin-top: 100px;
+		margin-bottom: 10px;
+	}
+}
